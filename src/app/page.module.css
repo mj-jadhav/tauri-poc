@@ -41,17 +41,26 @@
 
 .grid {
   display: grid;
-  grid-template-columns: repeat(4, minmax(25%, auto));
+  grid-template-columns: repeat(4, 1fr);
   max-width: 100%;
   width: var(--max-width);
 }
 
+.gridItem {
+  grid-column: 1 / -1; /* Span all columns */
+  justify-self: center; /* Center horizontally */
+  align-self: center; /* Center vertically */
+}
+
+
 .card {
   padding: 1rem 1.2rem;
   border-radius: var(--border-radius);
-  background: rgba(var(--card-rgb), 0);
+  background: rgba(var(--card-rgb), 1);
   border: 1px solid rgba(var(--card-border-rgb), 0);
   transition: background 200ms, border 200ms;
+  grid-column: 1 / -1; /* Span all columns */
+
 }
 
 .card span {
