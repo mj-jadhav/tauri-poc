@@ -5,13 +5,18 @@ This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next
 First, run the development server:
 
 ```bash
-npm run dev
+npm run tauri dev
 # or
 yarn dev
 # or
 pnpm dev
 # or
 bun dev
+```
+
+To create MacOS .app and .dmg
+```bash
+CI=true npm run tauri build # It will generate .app and .dmg under src-tauri/target/release/bundle
 ```
 
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
